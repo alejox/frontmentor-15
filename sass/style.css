@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --Very-dark-green: hsl(156, 42%, 18%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--Cream);
+  font-size: 1.4rem;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  gap: 2.4rem;
+  padding: 10% 4%;
+}
+
+.card {
+  background-color: var(--White);
+  overflow: hidden;
+  border-radius: 1.2rem;
+  max-width: 34rem;
+}
+@media (min-width: 1000px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 550px;
+  }
+}
+.card .header__img {
+  width: 100%;
+  height: 24rem;
+  background-image: url(../images/image-product-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 1000px) {
+  .card .header__img {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+}
+.card .body {
+  padding: 7%;
+  display: grid;
+  gap: 1.6rem;
+}
+@media (min-width: 1000px) {
+  .card .body {
+    padding: 10%;
+  }
+}
+.card .body__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--Dark-grayish-blue);
+  font-size: 1.2rem;
+}
+.card .body__title {
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  color: var(--Very-dark-blue);
+}
+.card .body__text {
+  color: var(--Dark-grayish-blue);
+}
+.card .body__values {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  margin-top: 12px;
+}
+.card .body__offer {
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  color: var(--Dark-cyan);
+}
+.card .body__price {
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  color: var(--Dark-grayish-blue);
+}
+.card .body__btn {
+  background-color: var(--Dark-cyan);
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  padding: 1.4rem 2.4rem;
+  color: var(--White);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.card .body__btn:hover {
+  background-color: var(--Very-dark-green);
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
